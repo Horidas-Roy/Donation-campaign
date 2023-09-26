@@ -1,11 +1,9 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
 
 const DonationCard = ({donation}) => {
       const{id,image,category,title,card_bg_color,text_color,category_btn_color}=donation
-      const colorStyle={
-
-      }
     return (
         <div>
             

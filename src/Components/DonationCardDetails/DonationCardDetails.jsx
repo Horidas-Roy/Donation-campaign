@@ -13,6 +13,7 @@ const DonationCardDetails = () => {
     const findDonation = donations?.find(donation => donation.id == id);
     setDonation(findDonation);
   }, [id, donations]);
+
   const { image, price, description, title,text_color } = donation || {};
 
   const handleDonate=()=>{
@@ -31,7 +32,9 @@ const DonationCardDetails = () => {
     }
     else{
          
+        const isExists=donatedItem.find(item=>item.id==id)
 
+        if(!isExists){
             addDonateItem.push(...donatedItem,donation)
             localStorage.setItem('donatedItem',JSON.stringify(addDonateItem));
             Swal.fire(
@@ -39,7 +42,14 @@ const DonationCardDetails = () => {
             'You added one item!',
             'success'
           )
-        
+        }
+        else{
+            Swal.fire(
+                'Good job!',
+                'You added one item once More!',
+                'success'
+            )
+        }
     }
 
 
