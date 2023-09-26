@@ -25,7 +25,11 @@ const TotalDonation = () => {
   return (
     <div>
       {
-        totalDonation>0?<div className="container mx-auto">
+        noFound ?(<div className="h-[70vh] flex items-center justify-center">
+        <p className="text-black text-5xl font-bold">{noFound}</p>
+       </div>)
+       :
+       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {isShow
             ? totalDonation?.map((donation, idx) => (
@@ -52,9 +56,7 @@ const TotalDonation = () => {
           )}
         </div>
       </div>
-      :(<div className="h-[70vh] flex items-center justify-center">
-        <p className="text-black text-5xl font-bold">{noFound}</p>
-       </div>)
+      
       }
     </div>
   );

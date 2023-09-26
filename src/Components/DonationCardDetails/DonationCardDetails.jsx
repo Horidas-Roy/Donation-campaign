@@ -72,7 +72,7 @@ const DonationCardDetails = () => {
         </div>
         <div className="p-6">
           <div className="mb-3 flex items-center justify-between">
-            <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+            <h5 className="block font-sans text-4xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
               {title}
             </h5>
           </div>
@@ -81,8 +81,6 @@ const DonationCardDetails = () => {
           </p>
           
         </div>
-       
-        <h2>this donation details:{title}</h2>
     </div>
   );
 };

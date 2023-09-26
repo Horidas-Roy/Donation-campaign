@@ -6,16 +6,20 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 const PieChartComponent = () => {
     const[yourDonationData,setYourDonationData]=useState([])
+    const [totalDonation,setTotalDonation]=useState([])
 
     useEffect(()=>{
         const donationData=JSON.parse(localStorage.getItem('donatedItem'))
           if(donationData){
             setYourDonationData(donationData)
           }
+          fetch("/donation.json")
+          .then(res=>res.json())
+          .then(data=>setTotalDonation(data))
     },[])
   const data = [
   { name: 'Your Donation', value: yourDonationData.length },
-  { name: 'Total Donation', value: 12 },
+  { name: 'Total Donation', value: totalDonation.length },
 ];
 
 const COLORS = ['#00C49F', '#FF444A'];
