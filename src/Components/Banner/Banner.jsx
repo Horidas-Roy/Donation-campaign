@@ -13,7 +13,7 @@ const Banner = ({handleSearch,handleInput}) => {
              
                 <div className=" text-[#0B0B0B]">
                 <h1 className="text-5xl font-bold mb-10">I Grow By Helping People In Need</h1>
-                <h1><input onChange={handleInput} className="py-2 px-3 md:w-80 outline-none border-2 rounded-lg rounded-r-none border-gray-300" type="text" placeholder="Search here" /><button onClick={handleSearch} className="bg-[#FF444A] text-[#FFF] py-2 px-4 border-2 rounded-lg rounded-l-none border-[#FF444A]">Search</button></h1>
+                <h1 className="flex flex-col justify-center md:flex-row gap-3 md:gap-0"><input onChange={handleInput} className="py-2 px-3 md:w-80 outline-none border-2 rounded-lg md:rounded-r-none border-gray-300" type="text" placeholder="Search here" /><button onClick={handleSearch} className="bg-[#FF444A] text-[#FFF] py-2 px-4 border-2 rounded-lg md:rounded-l-none border-[#FF444A]">Search</button></h1>
                 </div>
             </div>
             </div>

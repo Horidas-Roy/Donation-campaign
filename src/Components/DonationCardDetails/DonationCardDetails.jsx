@@ -26,7 +26,7 @@ const DonationCardDetails = () => {
         localStorage.setItem('donatedItem',JSON.stringify(addDonateItem));
         Swal.fire(
             'Good job!',
-            'You clicked the button!',
+            'Your Donation Successful!',
             'success'
           )
     }
@@ -39,15 +39,15 @@ const DonationCardDetails = () => {
             localStorage.setItem('donatedItem',JSON.stringify(addDonateItem));
             Swal.fire(
             'Good job!',
-            'You added one item!',
+            'Your Donation Successful!',
             'success'
           )
         }
         else{
             Swal.fire(
                 'Good job!',
-                'You added one item once More!',
-                'success'
+                'You already Donated this item!',
+                'wirning'
             )
         }
     }

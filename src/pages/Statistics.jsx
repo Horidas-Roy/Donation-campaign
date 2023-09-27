@@ -1,10 +1,10 @@
-import React from 'react';
-import PieChartComponent from './Piechart';
+import Piechart from "../Components/Chart/Piechart";
+
 
 const Statistics = () => {
     return (
-        <div>
-            <PieChartComponent></PieChartComponent>
+        <div className='h-[70vh] w-[100vw] mb-7'>
+            <Piechart></Piechart>
         </div>
     );
 };

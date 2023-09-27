@@ -8,13 +8,15 @@ const DonationCard = ({donation}) => {
         <div>
             
            <NavLink to={`/donationcarddetails/${id}`}>
-           <div className="card  shadow-xl" style={{color:text_color,backgroundColor:card_bg_color}}>
+           <div className="card  shadow-xl h-[350px]" style={{color:text_color,backgroundColor:card_bg_color}}>
+            <div>
             <figure>
-                <img className="w-full h-[300px]" src={image} alt="Shoes" />
+                <img className="w-full h-[220px]" src={image} alt="Shoes" />
             </figure>
-            <div className="card-body flex flex-col">
-                <h2 className="card-title flex-grow"><span className="py-2 px-4 rounded-lg text-sm font-medium" style={{backgroundColor:category_btn_color}}>{category}</span></h2>
-                <p className="text-[20px] font-semibold ">{title}</p>
+            </div>
+            <div className="p-4">
+                <h2 className="card-title"><span className="py-2 px-4 rounded-lg text-sm font-medium" style={{backgroundColor:category_btn_color}}>{category}</span></h2>
+                <p className="text-[20px] font-semibold">{title}</p>
             </div>
             </div>
            </NavLink>
